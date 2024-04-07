@@ -1,0 +1,106 @@
+{% extends 'temp/mworker.html' %}
+{% block base %}
+<!DOCTYPE html>
+<html style="font-size: 16px;" lang="en"><head>
+
+
+         <style>
+    .custom-btn {
+      border: 3px solid rgb(0, 0, 0);
+      transition: all 0.3s ease-in-out;
+      padding: 5px 10px; /* Adjust padding as needed */
+      display: inline-block; /* Ensures padding and border are included in the dimensions */
+        border-radius: 25px;
+    }
+
+    .custom-btn:hover {
+      border: 3px solid darkgoldenrod;
+      background-color: yellow;
+      transform: scale(1.1);
+    }
+  </style>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="keywords" content="72, 100, 87, 72, 100">
+    <meta name="description" content="">
+    <title>worker_view</title>
+    <link rel="stylesheet" href="/static/nicepage_worker.css" media="screen">
+<link rel="stylesheet" href="/static/worker_view.css" media="screen">
+    <script class="u-script" type="text/javascript" src="/static/jquery_worker.js" defer=""></script>
+    <script class="u-script" type="text/javascript" src="/static/nicepage_worker.js" defer=""></script>
+    <meta name="generator" content="Nicepage 6.3.1, nicepage.com">
+    <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
+    <link id="u-page-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|Abyssinica+SIL:400">
+    
+    
+    
+    <script type="application/ld+json">{
+		"@context": "http://schema.org",
+		"@type": "Organization",
+		"name": "blue"
+}</script>
+    <meta name="theme-color" content="#478ac9">
+    <meta property="og:title" content="worker_view">
+    <meta property="og:type" content="website">
+  <meta data-intl-tel-input-cdn-path="intlTelInput/"></head>
+  <body data-path-to-root="./" data-include-products="false" class="u-body u-overlap u-overlap-transparent u-xl-mode" data-lang="en">
+    <section class="u-clearfix u-image u-section-1" id="sec-a58b" data-image-width="3500" data-image-height="2500">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <div class="u-container-style u-expanded-width u-group u-shape-rectangle u-group-1">
+          <div class="u-container-layout u-valign-top u-container-layout-1">
+            <div class="u-expanded-width u-table u-table-responsive u-table-1">
+              <table class="u-table-entity">
+                <colgroup>
+                  <col width="17%">
+                  <col width="16.6%">
+                  <col width="16.6%">
+                  <col width="16.4%">
+                  <col width="16.8%">
+                  <col width="16.6%">
+                </colgroup>
+                <thead class="u-align-center u-black u-custom-font u-heading-font u-table-header u-table-valign-top u-table-header-1">
+                  <tr style="height: 50px;">
+                    <th class="u-border-2 u-border-no-left u-border-no-right u-border-white u-table-cell">S.No </th>
+                    <th class="u-border-2 u-border-no-left u-border-no-right u-border-white u-table-cell">Date </th>
+                    <th class="u-border-2 u-border-no-left u-border-no-right u-border-white u-table-cell">Time </th>
+                    <th class="u-border-2 u-border-no-left u-border-no-right u-border-white u-table-cell">Service Profile </th>
+                    <th class="u-border-2 u-border-no-left u-border-no-right u-border-white u-table-cell"> Name </th>
+                    <th class="u-border-2 u-border-no-left u-border-no-right u-border-white u-table-cell"> Place </th>
+                    <th class="u-border-2 u-border-no-left u-border-no-right u-border-white u-table-cell">Complaint</th>
+                    <th class="u-border-2 u-border-no-left u-border-no-right u-border-white u-table-cell">Replay </th>
+
+                  </tr>
+                </thead>
+                <tbody class="u-align-center u-custom-font u-font-roboto u-table-body u-table-body-1">
+                  {% for i in svcr %}
+                  <tr style="height: 91px;">
+                    <td class="u-first-column u-grey-80 u-table-cell u-table-cell-7">{{ forloop.counter }}</td>
+                    <td class="u-border-2 u-border-no-bottom u-border-no-top u-border-palette-2-dark-2 u-palette-3-light-1 u-table-cell u-table-cell-9">{{ i.date }}</td>
+                    <td class="u-border-2 u-border-no-bottom u-border-no-top u-border-palette-2-dark-2 u-palette-3-light-1 u-table-cell u-table-cell-10">{{ i.time }}</td>
+                      <td class="u-border-2 u-border-no-bottom u-border-no-top u-border-palette-2-dark-2 u-palette-3-light-1 u-table-cell u-table-cell-8"><a href="/static/{{ i.service.profile }}"><img src="\static\{{ i.service.profile }}" height="70px" width="75px" style="border-radius: 50px"></a></td>
+                    <td class="u-border-2 u-border-no-bottom u-border-no-top u-border-palette-2-dark-2 u-palette-3-light-1 u-table-cell u-table-cell-11">{{ i.service.service_name }}</td>
+                      <td class="u-border-2 u-border-no-bottom u-border-no-top u-border-palette-2-dark-2 u-palette-3-light-1 u-table-cell u-table-cell-11">{{ i.service.location }}</td>
+                      <td class="u-border-2 u-border-no-bottom u-border-no-top u-border-palette-2-dark-2 u-palette-3-light-1 u-table-cell u-table-cell-11">{{ i.complaint_description }}</td>
+                      <td class="u-border-2 u-border-no-bottom u-border-no-top u-border-palette-2-dark-2 u-palette-3-light-1 u-table-cell u-table-cell-11">{{ i.replay }}</td>
+
+                  </tr>
+                  {% endfor %}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </section>
+    
+    
+    
+    
+    <section class="u-backlink u-clearfix u-grey-80">
+ 
+    </section>
+  
+</body></html>
+{% endblock %}

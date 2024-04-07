@@ -1,0 +1,36 @@
+{% extends 'temp/mworker.html' %}
+{% block base %}
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>view</title>
+</head>
+<body>
+<form>
+	<table border="1">
+		<tr>
+
+			<td>Service Name</td>
+			<td>Post Description</td>
+            <td>Status</td>
+
+
+		</tr>
+            {% for i in mj %}
+		<tr>
+
+			<td>{{ i.service.service_name}}</td>
+			<td>{{ i.description }}</td>
+            <td>{{ i.status }}</td>
+
+
+
+        </tr>
+        {% endfor %}
+	</table>
+</form>
+</body>
+</html>
+{% endblock %}

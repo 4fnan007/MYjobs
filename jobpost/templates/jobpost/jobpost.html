@@ -1,0 +1,129 @@
+{% extends 'temp/mservice.html' %}
+{% block base %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Job Description</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+
+
+        form {
+            width: 80%;
+
+            margin: 0 auto;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(2, 45, 77, 0.505);
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+        table {
+            width: 100%;
+            color: transparent;
+        }
+
+        td {
+            padding: 10px;
+            color: #000000;
+            font-weight: bold;
+        }
+
+        select,
+        textarea {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+            margin-bottom: 10px;
+            border: 2px solid #96a9c0;
+            border-radius: 25px;
+            background-color: rgba(255, 255, 255, 0.707);
+            color: #000000;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+        input[type="text"] {
+            border-radius: 25px;
+            border: 2px solid #96a9c0;
+            width: 40%;
+        }
+
+        input[type="submit"] {
+          
+          background-color: #287fd0;
+          color: white;
+          padding: 10px 15px;
+          border: none;
+          border-radius: 25px;
+          cursor: pointer;
+          font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      }
+  
+      input[type="submit"]:hover {
+          background-color: #1463ca;
+          transform: scale(1.1);
+      }
+
+      input[type="reset"] {
+          background-color: #e6b111;
+          color: white;
+          padding: 10px 15px;
+          border: none;
+          border-radius: 25px;
+          cursor: pointer;
+          font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      }
+  
+      input[type="reset"]:hover {
+          background-color: #df6c06;
+          transform: scale(1.1);
+      }
+
+
+        h2{
+            color: #000000;
+            margin-bottom: 20px;
+            font-weight:bolder;
+            text-shadow: 2px 2px 4px #499ad7;
+            background-color: rgba(255, 255, 255, 0.103);
+            border-radius: 25px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            height: 75px;
+
+        }
+        
+
+
+    </style>
+</head>
+<body>
+<center>
+    <form method="post">
+        {% csrf_token %}
+        
+            <h2> <- Post Your Job -> </h2>
+        <table>
+            <tr>
+                <td>WORK: </td>
+                <td><input type="text" name="job_name" required class="form-control"></td>
+            </tr>
+            <tr>
+                <td>POST: </td>
+                <td><textarea name="description" rows="10" cols="40" required class="form-control"></textarea></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td> <input type="reset" value="Reset"> <input type="submit" value="Post Now"></td>
+            </tr>
+        </table>
+    </form>
+</center>
+</body>
+</html>
+{% endblock %}
