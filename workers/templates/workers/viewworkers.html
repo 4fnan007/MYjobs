@@ -1,0 +1,133 @@
+{% extends 'temp/updatemworker.html' %}
+{% block base %}
+
+<!DOCTYPE html>
+<html style="font-size: 16px;" lang="en"><head>
+
+
+    <script>
+    // JavaScript function to redirect to the update page
+    function redirectToUpdatePage(serviceId) {
+        // Construct the URL with the serviceId parameter
+        var updateUrl = "/workers/update_worker/" + serviceId;
+        // Redirect to the update page
+        window.location.href = updateUrl;
+    }
+</script>
+
+        <style>
+        label{
+            padding-top: 15px;
+        }
+    </style>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="keywords" content="72, 100, 87, 72, 100">
+    <meta name="description" content="">
+    <title>update</title>
+    <link rel="stylesheet" href="/static/nicepage_worker.css" media="screen">
+<link rel="stylesheet" href="/static/update.css" media="screen">
+    <script class="u-script" type="text/javascript" src="/static/jquery_worker.js" defer=""></script>
+    <script class="u-script" type="text/javascript" src="/static/nicepage_worker.js" defer=""></script>
+    <meta name="generator" content="Nicepage 6.4.0, nicepage.com">
+    <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
+    <link id="u-page-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab:100,200,300,400,500,600,700,800,900|Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|Abyssinica+SIL:400">
+    
+    
+    
+    <script type="application/ld+json">{
+		"@context": "http://schema.org",
+		"@type": "Organization",
+		"name": "blue"
+}</script>
+    <meta name="theme-color" content="#478ac9">
+    <meta property="og:title" content="update">
+    <meta property="og:type" content="website">
+  <meta data-intl-tel-input-cdn-path="intlTelInput/"></head>
+  <body data-path-to-root="./" data-include-products="false" class="u-body u-overlap u-xl-mode" data-lang="en">
+    <section class="u-clearfix u-image u-section-1" id="sec-a58b" data-image-width="3500" data-image-height="2500">
+      
+      <div class="u-clearfix u-sheet u-sheet-1">
+        {% for i in j %}
+        <div class="u-border-2 u-border-palette-1-base u-image u-image-circle u-image-contain u-image-1" alt="" data-image-width="1671" data-image-height="1920" style="background-image: url('/static/{{ i.profile }}');"></div>
+
+        <div class="data-layout-selected u-clearfix u-expanded-width u-gutter-0 u-layout-wrap u-layout-wrap-1">
+          <div class="u-layout">
+            <div class="u-layout-col">
+              <div class="u-size-60">
+                <div class="u-layout-row">
+                  <div class="u-container-style u-layout-cell u-shape-rectangle u-size-11-lg u-size-11-xl u-size-14-md u-size-14-sm u-size-14-xs u-layout-cell-1">
+                    <div class="u-border-2 u-border-no-bottom u-border-no-left u-border-no-top u-border-palette-1-dark-1 u-container-layout u-container-layout-1">
+                      <p class="u-align-center u-custom-font u-font-roboto-slab u-text u-text-1" style="cursor: default; padding-left: 7px" >Profile</p>
+                    </div>
+                  </div>
+                  <div class="u-container-style u-layout-cell u-size-46-md u-size-46-sm u-size-46-xs u-size-49-lg u-size-49-xl u-layout-cell-2">
+                    <div class="u-container-layout u-valign-top-lg u-valign-top-md u-valign-top-sm u-valign-top-xl u-container-layout-2">
+                      <h2 class="u-custom-font u-font-georgia u-text u-text-2">
+                        <span style="font-weight: 700;">Account </span>
+                        <span style="font-weight: 700;" class="u-text-palette-1-base">Settings<span style="font-weight: 400;">
+                            <span style="font-weight: 700;"></span>
+                          </span>
+                        </span>
+                      </h2>
+                                  <div class="u-form u-login-control u-form-1">
+                    <form action="#" class="u-clearfix u-form-custom-backend u-form-spacing-10 u-form-vertical u-inner-form" source="custom" name="form" style="padding: 0px;" method="post">
+                        <div class="u-form-group u-form-name u-label-left">
+                            <label for="username-a30d" class="u-custom-font u-font-roboto-slab u-label u-spacing-100 u-text-grey-90 u-label-1">Name:</label>
+                            <input type="text" placeholder="{{ i.name }}" id="username-a30d" name="username" class="u-border-2 u-border-palette-1-light-1 u-custom-font u-font-roboto-slab u-input u-input-rectangle u-radius u-input-1" required="" disabled>
+                        </div>
+                          <div class="u-form-group u-label-left u-form-group-2">
+                            <label for="text-765b" class="u-custom-font u-font-roboto-slab u-label u-spacing-100 u-text-grey-90 u-label-2">Email:</label>
+                            <input type="text" placeholder="{{ i.email }}"id="text-765b" name="text" class="u-border-2 u-border-palette-1-light-1 u-custom-font u-font-roboto-slab u-input u-input-rectangle u-radius u-input-2" required="" disabled>
+                          </div>
+                          <div class="u-form-group u-form-password u-label-left">
+                            <label for="password-a30d" class="u-custom-font u-font-roboto-slab u-label u-spacing-100 u-text-grey-90 u-label-3">Password:</label>
+                            <input type="text" placeholder="******" id="password-a30d" name="password" class="u-border-2 u-border-palette-1-light-1 u-custom-font u-font-roboto-slab u-input u-input-rectangle u-radius u-input-3" required="" disabled>
+                          </div>
+                          <div class="u-form-group u-label-left u-form-group-5">
+                            <label for="text-c68a" class="u-custom-font u-font-roboto-slab u-label u-spacing-100 u-text-grey-90 u-label-5">Contact:</label>
+                            <input type="text" placeholder="{{ i.phone_number }}" id="text-c68a" name="text-1" class="u-border-2 u-border-palette-1-light-1 u-custom-font u-font-roboto-slab u-input u-input-rectangle u-radius u-input-5" required="" disabled>
+                          </div>
+                          <div class="u-form-group u-label-left u-form-group-6">
+                            <label for="text-ce60" class="u-custom-font u-font-roboto-slab u-label u-spacing-100 u-text-grey-90 u-label-6">City:</label>
+                            <input type="text" placeholder="{{ i.city }}" id="text-ce60" name="text-2" class="u-border-2 u-border-palette-1-light-1 u-custom-font u-font-roboto-slab u-input u-input-rectangle u-radius u-input-6" required="" disabled>
+                          </div>
+                          <div class="u-form-group u-label-left u-form-group-7">
+                            <label for="text-643e" class="u-custom-font u-font-roboto-slab u-label u-spacing-100 u-text-grey-90 u-label-7">Location:</label>
+                            <input type="text" placeholder="{{ i.location }}" id="text-643e" name="text-3" class="u-border-2 u-border-palette-1-light-1 u-custom-font u-font-roboto-slab u-input u-input-rectangle u-radius u-input-7" required="" disabled>
+                          </div>
+                          <div class="u-form-group u-label-left u-form-group-8">
+                            <label for="text-7b5e" class="u-custom-font u-font-roboto-slab u-label u-spacing-100 u-text-grey-90 u-label-8">PIN:</label>
+                            <input type="text" placeholder="{{ i.pin }}" id="text-7b5e" name="text-5" class="u-border-2 u-border-palette-1-light-1 u-custom-font u-font-roboto-slab u-input u-input-rectangle u-radius u-input-8" required="" disabled>
+                          </div>
+                          <div class="u-form-group u-label-left u-form-group-9">
+                            <label for="text-6580" class="u-custom-font u-font-roboto-slab u-label u-spacing-100 u-text-grey-90 u-label-9">Payment-UPI:</label>
+                            <input type="text" placeholder="{{ i.amount }}" id="text-6580" name="text-4" class="u-border-2 u-border-palette-1-light-1 u-custom-font u-font-roboto-slab u-input u-input-rectangle u-radius u-input-9" required="" disabled>
+                          </div>
+                          <div class="u-form-group u-form-submit u-label-left">
+                            <label class="u-custom-font u-font-roboto-slab u-label u-spacing-100 u-text-grey-90 u-label-10"></label>
+                            <div class="u-align-right u-btn-submit-container">
+                                <!-- Change the anchor tag to a button element -->
+                            <button onclick="redirectToUpdatePage('{{ i.worker_id }}')" class="u-btn u-btn-round u-btn-submit u-button-style u-custom-font u-font-montserrat u-radius u-btn-1">Change​ Details</button>
+                            </div>
+                        </div>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+      
+    </section>
+    
+    
+    
+  
+</body></html>
+{% endblock %}
