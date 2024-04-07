@@ -1,0 +1,110 @@
+{% extends 'temp/mservice.html' %}
+{% block base %}
+<!DOCTYPE html>
+<html style="font-size: 16px;" lang="en"><head>
+
+     <style>
+    .custom-btn {
+      border: 3px solid cornflowerblue;
+      transition: all 0.3s ease-in-out;
+      padding: 5px 10px; /* Adjust padding as needed */
+      display: inline-block; /* Ensures padding and border are included in the dimensions */
+        border-radius: 25px;
+    }
+
+    .custom-btn:hover {
+      border: 3px solid darkgoldenrod;
+      background-color: yellow;
+      transform: scale(1.1);
+    }
+  </style>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="keywords" content="72, 100, 87, 72, 100">
+    <meta name="description" content="">
+    <title>Application</title>
+    <link rel="stylesheet" href="/static/nicepage_service.css" media="screen">
+<link rel="stylesheet" href="/static/service_view.css" media="screen">
+    <script class="u-script" type="text/javascript" src="/static/jquery_service.js" defer=""></script>
+    <script class="u-script" type="text/javascript" src="/static/nicepage_service.js" defer=""></script>
+    <meta name="generator" content="Nicepage 6.3.1, nicepage.com">
+    <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
+    <link id="u-page-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abyssinica+SIL:400">
+    
+    
+    
+    <script type="application/ld+json">{
+		"@context": "http://schema.org",
+		"@type": "Organization",
+		"name": "blue"
+}</script>
+    <meta name="theme-color" content="#478ac9">
+    <meta property="og:title" content="service_view">
+    <meta property="og:type" content="website">
+  <meta data-intl-tel-input-cdn-path="intlTelInput/"></head>
+  <body data-path-to-root="./" data-include-products="false" class="u-body u-overlap u-overlap-transparent u-xl-mode" data-lang="en">
+    <section class="u-clearfix u-image u-section-1" id="sec-a58b" data-image-width="3500" data-image-height="2500">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <img class="u-expanded-width u-image u-image-contain u-image-round u-radius u-image-1" style="margin-top: 50px" src="/static/images/clearoff.png" alt="" data-image-width="2744" data-image-height="550">
+        <div class="u-container-style u-expanded-width u-group u-shape-rectangle u-group-1">
+          <div class="u-container-layout u-valign-top u-container-layout-1">
+            <div class="u-expanded-width u-table u-table-responsive u-table-1">
+              <table class="u-table-entity">
+                <colgroup>
+                  <col width="17%">
+                  <col width="16.6%">
+                  <col width="16.6%">
+                  <col width="16.4%">
+                  <col width="16.8%">
+                  <col width="16.6%">
+                </colgroup>
+                <thead class="u-align-center u-black u-custom-font u-heading-font u-table-header u-table-valign-top u-table-header-1">
+                  <tr style="height: 50px;">
+                    <th class="u-border-2 u-border-no-left u-border-no-right u-border-white u-table-cell">S.No </th>
+                      <th class="u-border-2 u-border-no-left u-border-no-right u-border-white u-table-cell">Date </th>
+                      <th class="u-border-2 u-border-no-left u-border-no-right u-border-white u-table-cell">Time </th>
+                      <th class="u-border-2 u-border-no-left u-border-no-right u-border-white u-table-cell">JobPost </th>
+                      <th class="u-border-2 u-border-no-left u-border-no-right u-border-white u-table-cell">Post Description </th>
+                      <th class="u-border-2 u-border-no-left u-border-no-right u-border-white u-table-cell">Worker Profile </th>
+                    <th class="u-border-2 u-border-no-left u-border-no-right u-border-white u-table-cell">Worker Name </th>
+                    <th class="u-border-2 u-border-no-left u-border-no-right u-border-white u-table-cell">Contact</th>
+                    <th class="u-border-2 u-border-no-left u-border-no-right u-border-white u-table-cell">Place </th>
+                    <th class="u-border-2 u-border-no-left u-border-no-right u-border-white u-table-cell">Worker UPI </th>
+                    <th class="u-border-2 u-border-no-left u-border-no-right u-border-white u-table-cell">Payment Description </th>
+                    <th class="u-border-2 u-border-no-left u-border-no-right u-border-white u-table-cell">Amount </th>
+                  </tr>
+                </thead>
+                <tbody class="u-align-center u-custom-font u-font-roboto u-table-body u-table-body-1">
+                  {% for i in h %}
+                  <tr style="height: 91px;">
+                    <td class="u-first-column u-grey-80 u-table-cell u-table-cell-7">{{ forloop.counter }}</td>
+                  <td class="u-border-2 u-border-no-bottom u-border-no-top u-border-palette-2-dark-2 u-palette-3-light-1 u-table-cell u-table-cell-8">{{ i.date}}</td>
+                  <td class="u-border-2 u-border-no-bottom u-border-no-top u-border-palette-2-dark-2 u-palette-3-light-1 u-table-cell u-table-cell-8">{{ i.time}}</td>
+                    <td class="u-border-2 u-border-no-bottom u-border-no-top u-border-palette-2-dark-2 u-palette-3-light-1 u-table-cell u-table-cell-8">{{ i.application.jobpost.job_post }}</td>
+                    <td class="u-border-2 u-border-no-bottom u-border-no-top u-border-palette-2-dark-2 u-palette-3-light-1 u-table-cell u-table-cell-9">{{ i.application.jobpost.description }}</td>
+                    <td class="u-border-2 u-border-no-bottom u-border-no-top u-border-palette-2-dark-2 u-palette-3-light-1 u-table-cell u-table-cell-10"><a href="/static/{{ i.worker.profile }}"><img src="\static\{{ i.worker.profile }}" height="70px" width="75px"></a></td>
+                    <td class="u-border-2 u-border-no-bottom u-border-no-top u-border-palette-2-dark-2 u-palette-3-light-1 u-table-cell u-table-cell-11">{{ i.application.name }}</td>
+                  <td class="u-border-2 u-border-no-bottom u-border-no-top u-border-palette-2-dark-2 u-palette-3-light-1 u-table-cell u-table-cell-11">{{ i.application.phone_number }}</td>
+                  <td class="u-border-2 u-border-no-bottom u-border-no-top u-border-palette-2-dark-2 u-palette-3-light-1 u-table-cell u-table-cell-11">{{ i.application.place }}</td>
+                 <td class="u-border-2 u-border-no-bottom u-border-no-top u-border-palette-2-dark-2 u-palette-3-light-1 u-table-cell u-table-cell-11">{{ i.worker.amount }}</td>
+                  <td class="u-border-2 u-border-no-bottom u-border-no-top u-border-palette-2-dark-2 u-palette-3-light-1 u-table-cell u-table-cell-11">{{ i.description }}</td>
+                      <td class="u-border-2 u-border-no-bottom u-border-no-top u-border-palette-2-dark-2 u-palette-3-light-1 u-table-cell u-table-cell-10">{{ i.amount }}</td>
+
+              </tr>
+                  {% endfor %}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </section>
+    
+    
+    
+  
+</body></html>
+
+{% endblock %}
